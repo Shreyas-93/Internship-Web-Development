@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Car Website</title>
+
+   
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: black;
+        }
+
+        .navbar-toggler {
+            background-color: #17a2b8 !important;
+        }
+
+        .navstyle {
+            background-color: black;
+            color: #fff !important;
+        }
+
+        nav a {
+            color: #fff;
+        }
+
+        .main {
+            background-image: url('images/car.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            height: 75vh;
+        }
+
+        footer {
+        background-color: #292b2c;
+        text-transform: capitalize;
+        color: white;
+        padding: 20px 0;
+        font-size: 14px;
+    }
+
+    footer strong {
+        margin-bottom: 1.5rem !important;
+        color: #17a2b8;
+    }
+
+	footer {
+        background-color: #292b2c;
+        text-transform: capitalize;
+        color: white;
+        padding: 20px 0;
+        font-size: 16px; /* Increased font size */
+        font-family: 'fantasy', 'Papyrus'; /* Change the font family as needed */
+    }
+
+    footer strong {
+        margin-bottom: 1.5rem !important;
+        color: #17a2b8;
+        font-weight: bold;
+    }
+
+    footer p {
+        margin-top: 10px;
+        line-height: 1.6; /* Adjusted line height for better readability */
+    }
+
+    .social-icons {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        color: white;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #17a2b8;
+    }
+
+    ul.list-unstyled {
+        padding: 0;
+        list-style: none;
+    }
+
+    ul.list-unstyled li {
+        margin-bottom: 10px;
+    }
+
+    .copyright {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    </style>
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book Appointment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number:</label>
+                            <input type="tel" class="form-control" id="mobile" placeholder="Enter your mobile number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                        </div>
+                        <div class="form-group">
+                            <label for="carModel">Car Model:</label>
+                            <input type="text" class="form-control" id="carModel" placeholder="Enter your car model">
+                        </div>
+                        <button type="submit" class="btn btn-info">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navstyle">
+        <div class="container">
+            <a class="navbar-brand " href="#"><i class="fas fa-car fa-lg"> </i><span class="font-weight-bold"> &nbsp;AUTOINSIGHT HUB</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon text-info"><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Price</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-info ml-5 btn-lg text-capitalize" data-toggle="modal" data-target="#appointmentModal">Book Appointment</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container-fluid main pl-lg-5 d-flex align-items-center text-danger text-capitalize">
+        <div class="pl-lg-5">
+            <h1 class="ml-5 text-info font-weight-bold">Your Car Wellness</h1>
+            <p class="ml-5 text-white">
+                Driving Excellence: Where Your Car Receives VIP Treatment
+            </p>
+            <button id="bookAppointmentBtn" type="button" class="btn btn-info ml-5 text-capitalize" data-toggle="modal" data-target="#appointmentModal">Book Appointment</button>
+        </div>
+    </header>
+	<footer>
+		<div class="container">
+			<div class="row p-3 text-center">
+				<div class="col-md-4 col-sm-12">
+					<strong class="text-info"><i class="fas fa-location"></i> Our Location</strong>
+					<p>Store NO:5, P.B Road Dharwad, 580008</p>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<strong class="text-info">Our Phone</strong>
+					<p>+919998578902</p>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<strong class="text-info">Email</strong>
+					<p>autoinsighthub@gmail.com</p>
+					<!-- Social media icons -->
+					<div class="social-icons">
+						<a href="#" target="_blank" class="fab fa-facebook"></a>
+						<a href="#" target="_blank" class="fab fa-instagram"></a>
+						<a href="#" target="_blank" class="fab fa-twitter"></a>
+						<a href="#" target="_blank" class="fab fa-youtube"></a>
+						<a href="#" target="_blank" class="fab fa-linkedin"></a>
+						<a href="#" target="_blank" class="fab fa-pinterest"></a>
+					</div>
+				</div>
+			</div>
+			<!-- Additional details -->
+			<div class="row p-3 text-center">
+				<div class="col-md-4 col-sm-12">
+					<strong class="text-info">Quick Links</strong>
+					<ul class="list-unstyled">
+						<li><a href="/terms-of-service">Terms of Service</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/careers">Careers</a></li>
+						<!-- Replace "/terms-of-service", "/faq", and "/careers" with the actual paths to your pages -->
+					</ul>
+				</div>
+				<div class="col-md-8 col-sm-12">
+					<p>&copy; 2024 AutoInsight Hub. All Rights Reserved.</p>
+					<p><a href="/privacy-policy">Privacy Policy</a></p>
+					<!-- Replace "/privacy-policy" with the actual path to your privacy policy page -->
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
